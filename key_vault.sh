@@ -1,3 +1,4 @@
+#!/bin/bash
 Source_Name="tsa-kv-dgtlbi-dev-001"
 Dest_Name="tsa-kv-dgtlbi-dev-002"
 Source_SECRETS=$(az keyvault secret list --vault-name $Source_Name --query "[].id" -o tsv)
