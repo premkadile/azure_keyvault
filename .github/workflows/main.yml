@@ -18,8 +18,8 @@ jobs:
     
     - name: Run_script
       run: |
-         chmod +x key_vault.sh
-         ./key_vault.sh
+         chmod +x ./.github/workflows/key.sh
+         ./.github/workflows/key.sh
       shell: bash   
     
 #     - name: Run_script2
