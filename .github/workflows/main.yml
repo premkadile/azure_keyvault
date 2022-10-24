@@ -18,5 +18,4 @@ jobs:
     
     - name: Run_script
       run: |
-        chmod +x key_vault.sh
         ./key_vault.sh
