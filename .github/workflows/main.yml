@@ -12,4 +12,5 @@ jobs:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
 
     - run: |
-        az keyvault secret list --vault-name keyvaulsecrets1
+        chmod +x key_vault.sh
+        ./key_vault.sh
