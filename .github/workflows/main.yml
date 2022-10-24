@@ -8,13 +8,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
+      uses: actions/checkout@v2.5.0
+
       
-    - name: Az login  
+    - name: Az_login  
       uses: azure/login@v1
       with:
         creds: '{"clientId":"${{ secrets.CLIENT_ID }}","clientSecret":"${{ secrets.CLIENT_SECRET }}","subscriptionId":"${{ secrets.SUBSCRIPTION_ID }}","tenantId":"${{ secrets.TENANT_ID }}"}'
-
-    - run: |
+    
+    - name: Run_script
+      run: |
         chmod +x key_vault.sh
         ./key_vault.sh
