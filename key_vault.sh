@@ -1,6 +1,6 @@
 #!/bin/bash
-Source_Name="tsa-kv-dgtlbi-dev-001"
-Dest_Name="tsa-kv-dgtlbi-dev-002"
+Source_Name="keyvaulsecrets1"
+Dest_Name="keyvaulsecrets2"
 Source_SECRETS=$(az keyvault secret list --vault-name $Source_Name --query "[].id" -o tsv)
 # list out the destination key valut
 Dest_SECRETS=$(az keyvault secret list --vault-name $Dest_Name --query "[].id" -o tsv)
