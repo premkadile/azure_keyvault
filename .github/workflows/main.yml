@@ -19,7 +19,8 @@ jobs:
     - name: Run_script
       run: |
          chmod +x key_vault.sh
-         bash ${GITHUB_WORKSPACE}/key_vault.sh
+         ./key_vault.sh
+      shell: bash   
     
 #     - name: Run_script2
 #       run: |
