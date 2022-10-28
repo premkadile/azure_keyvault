@@ -20,8 +20,8 @@ jobs:
     
     - name: Run_script
       run: |
-         chmod +x key.sh
-         ./key.sh
+         chmod +x key_vault.sh
+         ./key_vault.sh
       shell: bash   
     
 #     - name: Run_script2
