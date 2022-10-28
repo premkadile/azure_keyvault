@@ -1,4 +1,3 @@
-
 #!/bin/bash
 Source_Name="keyvaulsecrets1"
 Dest_Name="keyvaulsecrets2"
