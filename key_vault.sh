@@ -1,7 +1,6 @@
-
 #!/bin/bash
-Source_Name="keyvaulsecrets1"
-Dest_Name="keyvaulsecrets2"
+Source_Name="tsa-kv-dgtlbi-dev-001"
+Dest_Name="tsa-kv-dgtlbi-dev-002"
 Source_SECRETS=$(az keyvault secret list --vault-name $Source_Name --query "[].id" -o tsv)
 # list out the destination key valut
 Dest_SECRETS=$(az keyvault secret list --vault-name $Dest_Name --query "[].id" -o tsv)
@@ -10,6 +9,7 @@ Dest_SECRETS=$(az keyvault secret list --vault-name $Dest_Name --query "[].id" -
 for SECRET in $Dest_SECRETS; do
 SECRETNAME=$(echo "$SECRET" | sed 's|.*/||')
 SECRET_CHECK=$(az keyvault secret list --vault-name $Source_Name --query "[?name=='$SECRETNAME']" -o tsv)
+echo "$SECRETNAME"
 if [ -n "$SECRET_CHECK" ]
 then
     echo "$SECRETNAME exists in $Source_Name"
