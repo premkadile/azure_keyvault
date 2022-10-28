@@ -1,6 +1,7 @@
 on: [push]
 #   schedule:
-#     - cron: "*/1 * * * *"
+#     - cron: '5 * * * *'
+#     - cron:  '30 5,17 * * *'
 
 name: keyvault_test
 
