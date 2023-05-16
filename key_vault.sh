@@ -30,6 +30,7 @@ else
     echo "$SECRETNAME not exists in $Source_Name"
     
     test
+    test2
 
 fi
 done
