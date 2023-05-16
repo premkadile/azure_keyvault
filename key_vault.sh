@@ -28,6 +28,8 @@ else
 fi
 else
     echo "$SECRETNAME not exists in $Source_Name"
+    
+    test
 
 fi
 done
